@@ -41,8 +41,8 @@ class Window(QWidget):
             self.lbl2.adjustSize()
             self.lbl2.move(200, 200)
             self.count += 1
-            self.lbl1 = QLabel(self.keys[self.count], self)
-            self.lbl1.move(300, 300)
+            self.lbl1.setText(self.keys[self.count])
+            #self.lbl1.move(300, 300)
             
         else:
             self.lbl2.setText("Incorrect")
