@@ -1,0 +1,151 @@
+to meet:au
+blue:ao
+red:aka
+bright:akarui
+autumn:aki
+to open:akeru
+to give:ageru
+morning:asa
+breakfast:asagohan
+day after tomorrow:asatte
+foot/leg:ashi
+tomorrow:ashita
+over there:asoko
+to play:asobu
+warm/mild:atatakai
+head:atama
+new:atarashii
+that side over there (form.):achira
+hot/kind/warm:atsui
+that side over there (inf):acchi
+afterwards:ato
+you:anata
+(hum) older brother:ani
+(hum) older sister:ane
+that over there:ano
+um...:ano
+apartment:apaato
+to bathe/shower:abiru
+dangerous:abunai
+generous/sweet:amai
+not very much:amari
+rain:ame
+candy:ame
+to wash:arau
+to be (object)/to have:aru
+to walk:aruku
+that one over there:are
+good:ii
+no:iie
+to say:iu
+house:ie
+how (form):ikaga
+to go:iku
+how many?/how old?:ikutsu
+how much?:ikura
+pond:ike
+doctor:isha
+chair:isu
+busy:isogashii
+painful:itai
+when:itsu
+together:isshoni
+always:itsumo
+dog:inu
+now:ima
+meaning:imi
+younger sister:imooto
+unpleasant:iyana
+entrance:iriguchi
+to be (person):iru
+to put in:ireru
+color:iro
+various/all kinds of:iroiro
+on top of:ue
+behind:ushiro
+thin (object):usui
+song:uta
+to sing:utau
+to be born:umareru
+sea:umi
+to sell:uru
+noisy/annoying:urusai
+jacket:uwagi
+picture/painting/drawing:e
+movie:eega
+cinema:eegakan
+english language:eego
+yes:ee
+station:eki
+elevator:erebeetaa
+pencil:enpitsu
+delicious:oishii
+many:ooi
+big:ookii
+a great number of people:oozei
+mother:okaasan
+sweets/candy:okashi
+money:okane
+to get up:okiru
+to put:oku
+wife:okusan
+alcohol:osake
+plate/dish:osara
+grandfather:ojiisan
+to teach:oshieru
+uncle:ojisan
+to push (like a button):osu
+late/slow:osoi
+green tea:ocha
+bathroom:otearai
+father:otoosan
+younger brother:otooto
+man:otoko
+boy:otoko no ko
+day before yesterday:ototoi
+year before last:ototoshi
+adult:otona
+stomach:onaka
+same:onaji
+older brother:oniisan
+older sister:oneesan
+grandmother:obaasan
+aunt:obasan
+bath:ofuro
+boxed lunch:obentoo
+to remember:oboeru
+friendly term for policeman:omawarisan
+heavy:omoi
+interesting:omoshiroi
+to swim:oyogu
+to get off/descend:oriru
+to finish:owaru
+music:ongaku
+woman:onna
+girl:onna no ko
+foreign country:gaikoku
+foreigner:gaikokujin
+company:kaisha
+stairs:kaidan
+shopping:kaimono
+to buy:kau
+to return a thing:kaesu
+to go back:kaeru
+to take (time or money):kakaru
+key:kagi
+to write:kaku
+student:gakusee
+to call by phone:kakeru
+umbrella:kasa
+to lend:kasu
+wind/a cold:kaze
+family:kazoku
+person (form.):kata
+school:gakkoo
+cup:kappu
+household:katei
+a corner:kado
+bag/basket:kaban
+vase:kabin
+paper:kami
+camera:kamera

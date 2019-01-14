@@ -1,0 +1,53 @@
+music:ongaku
+movie:eega
+magazine:zasshi
+sports:supootsu
+date (romantic):deeto
+tennis:tenisu
+TV:terebi
+ice cream:aisukuriimu
+breakfast:asagohan
+alcohol:osake
+green tea:ocha
+coffee:koohii
+dinner:bangohan
+hamburger:hanbaagaa
+lunch:hirugohan
+water:mizu
+home:ie
+school:gakkoo
+morning:asa
+tomorrow:ashita
+when:itsu
+today:kyoo
+at about:goro
+tonight:konban
+weekend:shuumatsu
+saturday:doyoobi
+sunday:nichiyoobi
+every day:mainichi
+every night:maiban
+to go:iku
+to return:kaeru
+to hear:kiku
+to drink:nomu
+to speak:hanasu
+to read:yomu
+to get up:okiru
+to eat:taberu
+to sleep:neru
+to see:miru
+to come:kuru
+to do:suru
+to study:benkyoosuru
+good:ii
+early:hayai
+not much:amari
+not at all:zenzen
+usually:taitei
+a little:chotto
+sometimes:tokidoki
+often/much:yoku
+that's right/let me see:soo desu ne
+but:demo
+how about:doodesuka

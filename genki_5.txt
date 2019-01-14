@@ -1,0 +1,58 @@
+sea:umi
+postal stamp:kitte
+ticket:kippu
+surfing:safin
+homework:shukudai
+food:tabemono
+birthday:tanjoobi
+test:tesuto
+weather:tenki
+drink:nomimono
+postcard:hagaki
+bus:basu
+airplane:hikooki
+room:heya
+I (used by men):boku
+holiday:yasumi
+travel:ryokoo
+new:atarashii
+hot:atsui
+busy:isogashii
+large:ooki
+interesting/funny:omoshiroi
+good-looking:kakkoii
+frightening:kowai
+cold:samui
+fun:tanoshii
+small:chiisai
+boring:tsumaranai
+old (thing):furui
+difficult:muzukashi
+easy (problem)/kind (person):yasashii
+cheap:yasui
+disgusted with:kiraina
+clean/beautiful:kireina
+healthy/energetic:genkina
+quiet:shizukana
+fond of/to like:sukina
+to hate:daikiraina
+to love:daisukina
+lively:nigiyakana
+not busy:himana
+to swim:oyogu
+to ask:kiku
+to ride/board:noru
+to do/preform:yaru
+to go out:dekakeru
+together:isshoni
+extremeely:sugoku
+and then:sorekara
+it's okay:daijoobu
+very:totemo
+what kind of...:donna
+counter (flat objects):mai
+to (a place)/till (a time):made
+mountain:yama
+river:kawa
+female:onna
+male:otoko

@@ -1,0 +1,58 @@
+this one:kore
+that one:sore
+that one over there:are
+which one:dore
+this:kono
+that:sono
+that over there:ano
+which:dono
+here:koko
+there:soko
+over there:asoko
+where:doko
+who:dare
+delicious:oishii
+fish:sakana
+pork cutlet:tonkatsu
+meat:niku
+menu:menyuu
+vegetable:yasai
+pencil:enpitsu
+umbrella:kasa
+bag:kaban
+shoes:kutsu
+wallet:saifu
+jeans:jiinzu
+dictionary:jisho
+bicycle:jitensha
+newspaper:shinbun
+t shirt:tiishatsu
+watch/clock:tokee
+notebook:nooto
+pen:pen
+hat:booshi
+book:hon
+cafe:kissaten
+bank:ginkoo
+toilet:toire
+library:toshokan
+post office:yuubinkyoku
+usa:amerika
+britain:igirisu
+korea:kankoku
+china:chuugoku
+economics:keezai
+computer:konpyuutaa
+business:bijinesu
+history:rekishi
+mother:okaasan
+father:otoosan
+how much:ikura
+yen:en
+expensive:takai
+welcome to our store:irasshaimase
+please:onegaishimasu
+please give me:kudasai
+then:jaa
+here it is/please:doozo
+thank you:doomo

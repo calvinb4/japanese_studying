@@ -1,0 +1,65 @@
+spring:horu
+summer:natsu
+fall:aki
+winter:fuyu
+shopping:kaimono
+dog:inu
+souvenir:omiyage
+child:kodomo
+meal:gohan
+picture/photo:shashin
+desk:tsukue
+letter:tegami
+cat:neko
+person:hito
+temple:otera
+park:kooen
+bus stop:basutei
+hospital:byooin
+bookstore:honya
+town:machi
+yesterday:kinoo
+hours:jikan
+last week:senshuu
+when:toki
+monday:getsuyoobi
+tuesday:kayoobi
+wednesday:suiyoobi
+thursday:mokuyoobi
+friday:kinyoobi
+to meet:au
+to buy:kau
+to write:kaku
+to take:toru
+to wait:matsu
+alone:hitoride
+right:migi
+left:hidari
+front:mae
+back:ushiro
+inside:naka
+on:ue
+under:shita
+near/nearby:chikaku
+next:tonari
+between:aida
+part time job:arubaito
+class:kurasu
+you:anata
+chair:isu
+bread:pan
+e-mail:meeru
+supermarket:suupaa
+departement store:depaato
+hotel:hoteru
+restaurant:resutoran
+there is:aru
+to understand:wakaru
+a person is:iru
+about (interval of time):gurai
+I'm sorry (inf.):gomennasai
+so/therefore:dakara
+many/a lot:takusan
+together with a person:to
+why:dooshite
+and then:soshite

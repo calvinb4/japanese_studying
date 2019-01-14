@@ -1,0 +1,78 @@
+um...:ano
+now:ima
+english language:eego
+yes (inf.):ee
+student:gakusee
+high school:kookoo
+p.m.:gogo
+a.m.:gozen
+years old:sai
+Mr./Ms.:san
+o-clock:ji
+people group:jin
+major:senkoo
+teacher:sensee
+that's right:soo desu
+I see/Is that so?:soo desu ka
+college:daigaku
+telephone:denwa
+friend:tomodachi
+name:namae
+what:nani
+Japan:nihon
+_ year student:nensee
+yes (form.):hai
+half:han
+number:bangoo
+international student:ryuugakusee
+I:watashi
+usa:amerika
+britain:igirisu
+australia:oosutoraria
+korea:kankoku
+sweeden:suweeden
+china:chuugoku
+science:kagaku
+asian studies:ajia kenkyuu
+economics:keezai
+international relations:kokusaikankee
+computer:konpyuutaa
+anthropology:jinruigaku
+politics:seeji
+business:bijinesu
+literature:bungaku
+history:rekishi
+job:shigoto
+doctor:isha
+office worker:kaishain
+high school student:kookoosee
+housewife:shufu
+grad student:daigakuinsee
+college student:daigakusee
+lawyer:bengoshi
+mother:okaasan
+father:otoosan
+older brother:oniisan
+older sister:oneesan
+younger brother:otooto
+younger sister:imooto
+good morning (inf.):ohayoo
+good morning (form.):ohayoo gozaimasu
+good afternoon:konnichiwa
+good evening:konbanwa
+goodbye (ritualistic):sayoonara
+goodbye (inf.):jaa mata
+goodbye (form.):shitsureeshimasu
+good night:oyasuminasai
+thank you (inf.):arigatoo
+thank you (form.):arigatoo gozaimasu
+excuse me/I'm sorry:sumimasen
+no:iie
+i'll go and come back:ittekimasu
+please go and come back:itterasshai
+I'm home:tadaima
+welcome home:okaerinasai
+thank you for the meal (before eating):itadakimasu
+thank you for the meal (after eating):gochisoosamadeshita
+how do you do?:hajimemashite
+nice to meet you:yoroshiku onegaishimasu

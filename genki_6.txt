@@ -1,0 +1,60 @@
+money:okane
+bath:ofuro
+kanji:kanji
+textbook:kyookasho
+this week:konshuu
+cd:shiidii
+municipal hospital:shiminbyooin
+shower:shawaa
+next:tsugi
+electricity:denki
+train:densha
+baggage:nimotsu
+personal computer:pasokon
+page:peeji
+window:mado
+night:yoru
+next week:raishuu
+next year:rainen
+tough situation:taihenna
+to play:asobu
+to hurry:isogu
+to take a bath:ofuronihairu
+to return (a thing):kaesu
+to turn off/erase:kesu
+to die:shinu
+to sit down:suwaru
+to stand up:tatsu
+to smoke:tabako o suu
+to use:tsukau
+to help:tetsudau
+to enter:hairu
+to carry/hold:motsu
+to be absent; to rest:yasumu
+to open:akeru
+to teach:oshieru
+to get off:oriru
+to borrow:kariru
+to close:shimeru
+to take a shower:shawaa o abiru
+to turn on:tsukeru
+to make a phone call:denwa o kakeru
+to forget/leave behind:wasureru
+to bring a person:tsuretekuru
+to bring a thing:mottekuru
+later on:atode
+(do something) late:osoku
+that would be fine:kekkoodesu
+because:kara
+right away:sugu
+really?:hontoodesuka
+slowly/leisurely:yukkuri
+north:kita
+south:minami
+east:higashi
+west:nishi
+entrance:kuchi
+hometown:shusshin
+deru:to exit
+country:kuni
+foreign:gaikoku
