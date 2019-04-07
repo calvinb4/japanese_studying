@@ -1,8 +1,9 @@
 # Calvin Bertoncini
 
 # This program creates a GUI for quizzing.
-
-from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel
+from PyQt5 import QtGui, QtCore
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut
 import sys
 import random
 
@@ -56,6 +57,14 @@ class Window(QWidget):
         self.setGeometry(100, 100, 500, 300)
         self.setWindowTitle("Quizzer")
         self.show()
+
+        enter_shortcut = QShortcut(self)
+        #enter_shortcut.setContext(Qt.ApplicationShortcut)
+        enter_shortcut.setKey(Qt.Key_Return)
+        enter_shortcut.activated.connect(self.clicked)
+        
+        #shortcut = QShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Enter), self)
+        #shortcut.activated.connect(self.clicked)
 
     def clicked(self):
         key = self.keys[self.count]
