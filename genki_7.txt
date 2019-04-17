@@ -1,0 +1,49 @@
+older sister:oneesan
+apartment:apaato
+younger sister:imooto
+song:uta
+grandfather:ojiisan
+younger brother:otooto
+man:otoko no hito
+older brother:oniisan
+grandmother:obaasan
+woman:onna no hito
+company:kaisha
+family:kazoku
+hair:kami
+brothers and sisters:kyoodai
+mouth:kuchi
+country:kuni
+car:kuruma
+game:geemu
+conveinience store:konbini
+club activity:saakuru
+cafeteria/dining commons:shokudoo
+eye:me
+glasses:megane
+cute:kawaii
+tall (stature):takai
+short (stature):hikui
+long:nagai
+short (length):mijikai
+fast:hayai
+kind:shinsetsuna
+convenient:benrina
+to sing:utau
+to put on a hat:kaburu
+to know:shiru
+to live:sumu
+to put on clothes (above waste):kiru
+to put on clothes (below waste):haku
+to gain weight:futoru
+to work for:tsutomeru
+to put on glasses:kakeru
+to lose weight:yaseru
+to get married:kekkonsuru
+not anything:nanimo
+one person:hitori
+two people:futari
+nothing in particular:betsuni
+hello (on phone):moshimoshi
+of course:mochiron
+if you like:yokattara

@@ -1,0 +1,53 @@
+leg/foot:ashi
+meaning:imi
+restroom:otearai
+stomach:onaka
+cold:kaze
+girlfriend:kanojo
+boyfriend:kare
+temperature (weather):kion
+cloudy weather:kumori
+match/game:shiai
+juice:juusu
+politics:seeji
+grade:seeseki
+cough:seki
+throat:nodo
+tooth:ha
+flower:hana
+sunny weather:hare
+clothes:fuku
+hangover:futsukayoi
+present:puresento
+homesickness:hoomushikku
+minus:mainasu
+thing:mono
+snow:yuki
+business to take care of:yooji
+sweet:amai
+hurtful/painful:itai
+there are many:ooi
+narrow:semai
+inconvinient/scheduling conflict:tsugoo ga warui
+bad:warui
+nice:sutekina
+to walk:aruku
+to catch a cold:kaze wo hiku
+to be interested in (topic take ni particle):kyoomi ga aru
+to lose:nakusu
+to have a fever:netsu ga aru
+to become thirsty:nodo ga kawaku
+to cough:seki ga deru
+to break up/separate:wakareru
+to get nervous:kinchoosuru
+to worry:shinpaisuru
+Get well soon!:odaijini
+don't look well:genki ga nai
+probaly/maybe:tabun
+as much as possible:dekiru dake
+probably:deshoo
+degress (temperature):do
+because:node
+for the first time:hajimete
+very soon:moosugu
+

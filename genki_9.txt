@@ -1,0 +1,39 @@
+to dance:odoru
+something ends:owaru
+to be popular:ninki ga aru
+something begins:hajimaru
+to play a stringed instrument:hiku
+to get from somebody:morau
+to memorize:oboeru
+to appear/exit:deru
+to do physical exercise:undoosuru
+to take a walk:sanposuru
+from:kara
+by all means:zehi
+by the way:tokorode
+all:minna
+already:moo
+good child:iiko
+color:iro
+boxed lunch:obentoo
+japanese theatre art:kabuki
+guitar:gitaa
+last year:kyonen
+medicine:kusuri
+concert:konsaato
+near future:kondo
+essay/composition:sakubun
+exam:shiken
+ski:sukii
+last month:sengetsu
+word/vocabulary:tango
+piano:piano
+pizza:piza
+illness/sickness:byooki
+red:akai
+blue:aoi
+black:kuroi
+lonely:sabishii
+white:shiroi
+young:wakai
+mean-spirited:ijiwaruna

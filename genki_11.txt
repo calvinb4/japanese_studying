@@ -1,0 +1,50 @@
+australia:oosutoraria
+snack/sweets:okashi
+new years:oshoogatsu
+boy:otoko no ko
+festival:omatsuri
+toy:omocha
+spa/hot spring:onsen
+girl:onna no ko
+foreign country:gaikoku
+singer:kashu
+river:kawa
+camp:kyanpu
+this person/way (polite):kochira
+this semester:kongakki
+president of a company:shachoo
+class:jugyoo
+future:shoorai
+shrine:jinja
+fishing:tsuri
+drive:doraibu
+beer:biiru
+art museum:bijutsukan
+host family:hosutofamirii
+lake:mizuumi
+mountain:yama
+dream:yume
+roomate:ruumumeeto
+after an event:ato
+coming from:shusshin
+and then:soshite
+just/only:dake
+points:ten
+it has been a long time:hisashiburi
+okay/so-so:maamaa
+more:motto
+to tell a lie:uso wo tsuku
+to become hungry:onaka ga suku
+to own a pet:kau
+to cut classes:saboru
+to take a class/get a grade:toru
+to learn:narau
+to climb:noboru
+to work:hataraku
+to get tired:tsukareru
+to quit:yameru
+to have a fight:kenkasuru
+to introduce person (wo) to person (ni):shookaisuru
+to go on a diet:daiettosuru
+to be late for an appointment:chikokusuru
+to study abroad:ryuugakusuru

@@ -1,0 +1,51 @@
+it rains:ame ga furu
+to wash:arau
+to say:iu
+to need:iru
+to be late:osokunaru
+to think:omoo
+to cut:kiru
+to make:tsukuru
+to take (a thing):motteiku
+to stare at:jirojiromiru
+to throw away:suteru
+to begin:hajimeru
+to drive:untensuru
+to do laundry:sentakusuru
+to clean:soojisuru
+to call:denwasuru
+to cook:ryoorisuru
+always:itsumo
+no:uun
+yes:un
+cheers!:kanpai
+that's too bad:zannen
+about/concerning:nitsuite
+not yet:mada
+all of the poeple together:minnade
+the day after tomorrow:asatte
+rain:ame
+office worker:kaishain
+camera:kamera
+karaoke:karaoke
+air:kuuki
+this morning:kesa
+blackboard:kokuban
+this month:kongetsu
+job/occupation:shigoto
+college student:daigakusee
+weather forecast:tenkiyohoo
+place:tokoro
+tomato:tomato
+summer:natsu
+something:nanika
+party:paatii
+barbecue:baabekyuu
+chopsticks:hashi
+winter:fuyu
+homestay:hoomusutei
+every week:maishuu
+next month:raigetsu
+skillful:joozuna
+clumsy/poor at:hetana
+famous:yuumeina

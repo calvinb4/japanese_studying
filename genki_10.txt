@@ -1,0 +1,50 @@
+fall:aki
+doctor:isha
+station:eki
+rich person:okanemochi
+face:kao
+season:kisetsu
+milk:gyuunyuu
+cake:keeki
+this year:kotoshi
+soccer:sakkaa
+shirt:shatsu
+bullet train:shinkansen
+life/living:seekatsu
+world:sekai
+subway:chikatetsu
+gloves:tebukuro
+barber:tokoya
+spring:haru
+pants:pantsu
+beauty parlor:biyooin
+flight:bin
+ship/boat:fune
+baseball:yakyuu
+celebrity:yuumeejin
+reservation:yoyaku
+next semester:raigakki
+apple:ringo
+warm:atatakai
+slow/late:osoi
+cool (weather):suzushii
+cold (things/people):tsumetai
+sleepy:nemui
+easy/simple:kantanna
+to take:kakaru
+to stay (at a place (ni)):tomaru
+to become:naru
+to pay:harau
+to decide:kimeru
+to travel:ryokoosuru
+to practice:renshuusuru
+on foot:aruite
+best:ichiban
+or:ka
+for __ months:kagetsu
+after:go
+these days:konogoro
+for __ weeks:shuukan
+how:dooyatte
+how much/how long:donogurai
+early/quickly:hayaku
