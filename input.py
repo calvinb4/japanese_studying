@@ -31,6 +31,10 @@ class Window(QWidget):
 
     def initUI(self):
 
+        font = QtGui.QFont("Times", 16, QtGui.QFont.Normal)
+
+        self.setFont(font)
+        
         self.count = 0
 
         self.setup_dictionary()
@@ -44,7 +48,7 @@ class Window(QWidget):
         self.btn.clicked.connect(self.clicked)
 
         self.btn2 = QPushButton("Show answer", self)
-        self.btn2.move(100, 75)
+        self.btn2.move(100, 85)
         self.btn2.clicked.connect(self.show_answer)
 
         self.le = QLineEdit(self)
@@ -52,7 +56,7 @@ class Window(QWidget):
         
         self.lbl1 = QLabel(self.keys[self.count], self)
         self.lbl1.move(100, 200)
-        self.lbl1.adjustSize()
+        #self.lbl1.adjustSize()
 
         self.setGeometry(100, 100, 500, 300)
         self.setWindowTitle("Quizzer")
@@ -81,6 +85,7 @@ class Window(QWidget):
             self.count += 1
             self.lbl1.setText(self.keys[self.count])
             #self.lbl1.move(300, 300)
+            self.lbl1.adjustSize()
 
             self.lbl3.setText("") # Refreshes answer to null string
             
@@ -96,7 +101,7 @@ class Window(QWidget):
     def show_answer(self):
         key = self.keys[self.count]
 
-        self.lbl3.move(100, 85)
+        self.lbl3.move(100, 110)
         self.lbl3.setMargin(10)
         self.lbl3.setText(dictionary[key])
         self.lbl3.adjustSize()     
