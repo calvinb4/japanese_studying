@@ -50,4 +50,3 @@ degress (temperature):do
 because:node
 for the first time:hajimete
 very soon:moosugu
-
