@@ -96,7 +96,7 @@ keys = list(genki_combined.keys())
 random.shuffle(keys)
 
 
-missed=[]
+missed={}
 
 print("Welcome to jisho.py! Keep studying hard! Stay focused! Remember the happy rock/seeds of happiness!")
 #print("You have learned " + str(word_length) + " words. Great job!")
@@ -108,11 +108,12 @@ for key in keys:
     print(genki_combined[key])
     
     if (answer != genki_combined[key]):
-        missed.append(key)
+        missed[key + "    " + genki_combined[key]] = answer
 
-print("\nMissed words:\n")
+print("\nMissed words:")
+print("English       Correct answer       Your answer\n")
 for i in missed:
-    print(i,genki_combined[i])
+    print(i,"    ",missed[i])
 
 # else:
 #     for word in list:
