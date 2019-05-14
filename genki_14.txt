@@ -1,0 +1,45 @@
+older brother:ani
+landlord/landlady:ooyasan
+return:okaeshi
+wife:okusan
+uncle/middle-aged man:ojisan
+aunt/middle-aged woman:obasan
+glass:gurasu
+Christmas:kurisumasu
+husband:goshujin
+plate/dish:sara
+time:jikan
+ticket:chiketto
+chocolate:chokoreeto
+sweat shirt:toreenaa
+stuffed animal:nuigurumi
+necktie:nekutai
+valentine's day:barentaindee
+camcorder:bideokamera
+married couple:fuufu
+white day:howaitodee
+winter scarf:mafuraa
+comic book:manga
+multistory apartment building:manshon
+mandarin orange:mikan
+everyone:minasan
+ring:yubiwa
+radio:rajio
+parents:ryooshin
+resume:rirekisho
+to want:hoshii
+stingy/cheap:kechina
+to send:okuru
+to look good:niau
+to give up:akirameru
+to give (to others):ageru
+to give (to me):kureru
+to be made:dekiru
+to consult:soodansuru
+to propose marriage:puropoozusuru
+same:onaji
+like this/this kind of:konna
+we:watashitachi
+exactly:choodo
+what should we do:dooshitaraii
+well:yoku

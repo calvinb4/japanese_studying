@@ -1,0 +1,47 @@
+waiter:ueitaa
+house/home:otaku
+adult:otona
+foreign language:gaikokugo
+musical instrument:gakki
+karate:karate
+curry:karee
+kimono:kimono
+advertisement:kookoku
+black tea:koocha
+language:kotoba
+golf:gorufu
+sweater:seetaa
+elephant:zoo
+violin:baiorin
+motorcycle:baiku
+consumer prices:bukka
+grammar:bunpoo
+lawyer:bengoshi
+recruitment:boshuu
+shop/store:mise
+gangster:yakuza
+promise/appointment:yakusoku
+term paper:repooto
+I (v. formal):watakushi
+glad:ureshii
+sad:kanashii
+hot, spicy/salty:karai
+strict:kibishii
+incredible/awesome:sugoi
+close/near:chikai
+various:iroirona
+lasting happiness:shiawasena
+no good:damena
+to knit:amu
+to lend/rent:kasu
+to do one's best/try hard:ganbaru
+to cry:naku
+to brush (teeth)/to polish:migaku
+to keep a promise:yakusoku o mamoru
+to be moved by (ni):kandoosuru
+someone honorable is present:irasshaimasu
+times:kai
+kilometers:kiro
+as a matter of fact:jitsu wa
+all:zenbu
+my name is:tomooshimasu

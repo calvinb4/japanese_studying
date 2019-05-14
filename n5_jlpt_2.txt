@@ -1,0 +1,116 @@
+tuesday:kayoobi
+spicy:karai
+body:karada
+to borrow:kariru
+light:karui
+curry:karee
+calendar:karendaa
+river:kawa
+cute:kawaii
+kanji:kanji
+tree:ki
+yellow:kiiro
+to disappear:kieru
+to hear/ask:kiku
+north:kita
+guitar:gitaa
+dirty:kitanai
+cafe:kissaten
+postal stamp:kitte
+ticket:kippu
+yesterday:kinoo
+nine:kyuu
+beef:gyuuniku
+milk:gyuunyuu
+today:kyoo
+classroom:kyooshitsu
+siblings (hum.):kyoodai
+last year:kyonen
+to dislike:kiraina
+to cut/to wear from the shoulders down:kiru
+pretty/clean:kireina
+kilogram:kiroguramu
+kilometer:kiromeetoru
+bank:ginkoo
+friday:kinyoobi
+medicine:kusuri
+please:kudasai
+fruit:kudamono
+mouth/opening:kuchi
+shoes:kutsu
+socks:kutsushita
+country:kuni
+cloudy weather:kumori
+to become cloudy:kumoru
+gloomy:kurai
+class:kurasu
+gram:guramu
+car/vehicle:kuruma
+black:kuro
+policeman:keekan
+this morning:kesa
+to erase/turn off:kesu
+splendid/enough:kekkoo
+marriage:kekkon
+monday:getsuyoobi
+entry hall:genkan
+healthy:genkina
+park:kooen
+intersection:koosaten
+black tea:koocha
+police station:kooban
+voice:koe
+coat:kooto
+coffee:koohii
+here:koko
+p.m.:gogo
+a.m.:gozen
+to answer:kotaeru
+this side (form.):kochira
+this side (inf.):kocchi
+a glass:koppu
+this year:kotoshi
+word/language:kotoba
+child:kodomo
+this:kono
+meal/cooked rice:gohan
+to copy:kopiisuru
+to be worried:komaru
+this one:kore
+this month:kongetsu
+this week:konshuu
+such:konna
+this evening:konban
+well...:saa
+wallet:saifu
+fish:sakana
+the future/previous:saki
+to bloom:saku
+composition/writing:sakubun
+to stretch out hands/raise an umbrella:sasu
+magazine:zasshi
+sugar:satoo
+cold:samui
+year after next:sarainen
+to stroll:sanposuru
+salt:shio
+however:shikashi
+time:jikan
+job:shigoto
+dictionary:jisho
+quiet:shizukana
+below:shita
+question:shitsumon
+bicyle:jitensha
+automobile:jidoosha
+to die:shinu
+oneself:jibun
+to close/tie:shimeru
+lesson/class work:jugyoo
+skillful:joozuna
+strong/durable:joobuna
+soy souce:shooyu
+dining hall:shokudoo
+to know:shiru
+white:shiro
+skirt:sukaato
