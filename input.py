@@ -3,7 +3,7 @@
 # This program creates a GUI for quizzing.
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut
+from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar
 import sys
 #import webbrowser
 import random
@@ -11,6 +11,7 @@ import random
 #a = {"dictionary":"jisho","you":"anata","to hear":"kiku","stairs":"kaidan","white":"shiro"}
 
 file_read = 'genki_2.txt'
+#file_read = "test.py"
 
 with open(file_read,'r') as f:
     f = f.read()
@@ -23,7 +24,54 @@ with open(file_read,'r') as f:
         vals.append(line[1])
     dictionary = dict(zip(keys, vals))
 
-missed = {}
+class Missed_Display(QScrollArea):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+
+    def initUI(self):
+
+        widget = QWidget()
+        self.layout = QVBoxLayout(widget)
+        #layout.addLayout(box)
+        #self.layout.setAlignment(Qt.AlignTop)
+
+        #self.scroll = QScrollBar()
+        #self.scroll.setMaximum(900)
+        #self.scroll.sliderMoved.connect(self.scroll_move)
+
+        #hbox.addWidget(self.scroll)
+        # self.lbl = QLabel(self)
+        # self.lbl.move(100,100)
+        # self.lbl.setText("hi!")
+
+        font = QtGui.QFont("Times", 16, QtGui.QFont.Normal)
+        self.setFont(font)
+
+        self.setGeometry(100, 100, 500, 300)
+        self.setWindowTitle("Missed Words")
+
+        #self.lbl2 = QLabel(self)
+        #self.lbl.move(100,200)
+
+        count = 0
+
+        guide = QLabel(self)
+        guide.setText("English    Correct answer    Your answer")
+        self.layout.addWidget(guide)
+        
+        for i in window.missed: # window is instance of Window class
+            self.setup_one_missed_label(i, count)
+            count += 1
+
+        self.setWidget(widget)
+        self.setWidgetResizable(True)
+
+    def setup_one_missed_label(self, i, count):
+        new = QLabel(self)
+        new.move(300,0+20*count)
+        new.setText(i + "    " + window.missed[i])
+        self.layout.addWidget(new)
 
 class Window(QWidget):
 
@@ -34,6 +82,7 @@ class Window(QWidget):
 
     def initUI(self):
 
+        self.missed = {}
         self.already_missed = False
         
         font = QtGui.QFont("Times", 16, QtGui.QFont.Normal)
@@ -90,21 +139,22 @@ class Window(QWidget):
             # Resets if at end of dictionary
             if (len(self.keys) == self.count + 1):
                 self.print_missed()
-            
-            self.count += 1
-            self.lbl1.setText(self.keys[self.count])
-            #self.lbl1.move(300, 300)
-            self.lbl1.adjustSize()
 
-            self.lbl3.setText("") # Refreshes answer to null string
-            self.le.setText("") # Refreshes input to null string
+            else:
+                self.count += 1
+                self.lbl1.setText(self.keys[self.count])
+                #self.lbl1.move(300, 300)
+                self.lbl1.adjustSize()
+
+                self.lbl3.setText("") # Refreshes answer to null string
+                self.le.setText("") # Refreshes input to null string
             
         else:
             self.lbl2.setText("Incorrect")
             self.lbl2.adjustSize()
             self.lbl2.move(100, 150)
             if (self.already_missed == False):
-                missed[self.key + "    " + dictionary[self.key]] = self.le.text()
+                self.missed[self.key + "    " + dictionary[self.key]] = self.le.text()
                 self.already_missed = True # Otherwise duplicate values in missed
 
     def setup_dictionary(self):
@@ -120,14 +170,18 @@ class Window(QWidget):
         self.lbl3.adjustSize()
 
     def print_missed(self):
-        printed_file = open("missed.txt","w+")
-        printed_file.write("Missed words:\nEnglish    Correct answer    Your answer\n")
-        for i in missed:
-            printed_file.write(i+"    "+missed[i]+"\n")
+        #printed_file = open("missed.txt","w+")
+        #printed_file.write("Missed words:\nEnglish    Correct answer    Your answer\n")
+        #for i in missed:
+        #    printed_file.write(i+"    "+missed[i]+"\n")
 
         #webbrowser.open("missed.txt") # Opens missed words
 
-        self.close() # Closes window
+        #self.close() # Closes window
+
+        
+        self.new_window = Missed_Display()
+        self.new_window.show()
 
     def skip_question(self):
         self.already_missed = False
@@ -143,7 +197,10 @@ class Window(QWidget):
             self.lbl3.setText("") # Refreshes answer to null string
             self.le.setText("") # Refreshes input to null string
 
-            missed[self.key + "    " + dictionary[self.key]] = "Skipped"
+            self.missed[self.key + "    " + dictionary[self.key]] = "Skipped"
+
+    def return_missed(self):
+        return self.missed
 
 if __name__ == "__main__":
 
