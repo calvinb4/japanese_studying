@@ -1,0 +1,44 @@
+station attendant:ekiin
+size:ookisa
+parent:oya
+final exam:kimatsushiken
+research:kenkyuu
+garbage:gomi
+sugar:satoo
+scholarship:shoogakukin
+relatives:shinseki
+letter of recommendation:suisenjoo
+graduate school:daigakuin
+typhoon:taifuu
+day:hi
+file/portfolio:fairu
+way/road/direction:michi
+alarm clock:mezamashidokee
+dirty:kitanai
+to wake someone up:okosu
+to treat someone to a meal:ogoru
+to get depressed:ochikomu
+to have difficulty:komaru
+to take something out/hand in something:dasu
+to correct/fi:naosu
+to become lost:michi ni mayoo
+to be found:mitsukaru
+to go to pick up:mukae ni iku
+to translate:yakusu
+to laugh:warau
+to iron clothes:airon o kakeru
+to collect:atsumeru
+to put something in:ireru
+to miss (a vehicle eg. train):noriokureru
+to show:miseru
+to oversleep:asaneboosuru
+to show someone around a place:annaisuru
+to explain:setsumeesuru
+to come to pick up:mukae ni kuru
+let me see...:eeto
+by the end of today:kyoojuuni
+the other day:konoaida
+about this much:konogurai
+from now on:korekara
+do something alone:jibunde
+other:hokano

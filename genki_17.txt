@@ -1,0 +1,52 @@
+guest/visitor/client/customer:okyakusan
+hot water:oyu
+lock/key:kagi
+fire:kaji
+paper:kami
+salary:kyuuryoo
+contact lenses:kontakuto
+the lowest/worst:saitee
+company employee:sarariiman
+overtime work:zangyoo
+prime minister:shushoo
+shopping mall:shoppingumooru
+spoon:supoon
+lottery:takarakuji
+difference:chigai
+zoo:doobutsuen
+news:nyuusu
+panda:panda
+heater:hiitaa
+beard:hige
+secret:himitsu
+boots:buutsu
+dormitory:ryoo
+travel agency:ryokoogaisha
+dangerous:abunai
+envious:urayamashii
+a little/a few:sukunai
+strong:tsuyoi
+to choose/to select:erabu
+to boil water:oyu o wakasu
+to comb one's hair:kami o tokasu
+to get crowded:komu
+to win a lottery:takarakuji ni ataru
+to take off clothes:nugu
+to shave one's beard:hige o soru
+to make tea/coffee/etc.:ireru
+to be born:umareru
+to lock:kagi o kakeru
+to be sufficient:tariru
+to get used to:nareru
+to pray:oinorisuru
+to put makeup on:keshoosuru
+to get a full-time job at a company:shuushokusuru
+to wear small items (necktie/watch/etc.):suru
+to get a divorce:rikonsuru
+Congratulations!:omedetoogozaimasu
+very:zuibun
+for example:tatoeba
+compared with:ni kurabete
+according to:ni yoruto
+after all:yappari
+moreover:soreni
