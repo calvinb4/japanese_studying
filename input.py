@@ -1,17 +1,18 @@
 # Calvin Bertoncini
 
 # This program creates a GUI for quizzing.
+import os
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar
+from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar, QComboBox, QToolButton, QMenu, QCheckBox, QWidgetAction
 import sys
 #import webbrowser
 import random
 
 #a = {"dictionary":"jisho","you":"anata","to hear":"kiku","stairs":"kaidan","white":"shiro"}
 
-file_read = 'genki_2.txt'
-#file_read = "test.py"
+#file_read = 'genki_2.txt'
+file_read = "test.py"
 
 with open(file_read,'r') as f:
     f = f.read()
@@ -82,6 +83,40 @@ class Window(QWidget):
 
     def initUI(self):
 
+        self.files_added = []
+
+        # Drop down menu
+        files = [f for f in os.listdir("vocab_files") if os.path.isfile(f)]
+        
+        
+        self.toolbutton = QToolButton(self)
+        self.toolbutton.setText("Select Files")
+        
+        self.toolmenu = QMenu(self)
+        for i in files:
+            #self.checkbox = QCheckBox(i, self.toolmenu)
+            #self.checkbox.filename = i
+            #self.checkbox.stateChanged.connect(self.box_check)
+            
+            #action = self.toolmenu.addAction(str(i))
+            #action.setCheckable(True)
+            #action = QWidgetAction(self.toolmenu)
+            #action.setDefaultWidget(self.checkbox)
+            #action.text = i
+            #self.toolmenu.addAction(action)
+            action = self.toolmenu.addAction(str(i))
+            action.setCheckable(True)
+
+        self.toolmenu.triggered.connect(self.menu_trigger)
+        self.toolbutton.setMenu(self.toolmenu)
+        self.toolbutton.setPopupMode(QToolButton.InstantPopup)
+        self.toolbutton.move(200,200)
+
+        print(self.toolmenu.actions())
+
+        
+        
+
         self.missed = {}
         self.already_missed = False
         
@@ -126,6 +161,12 @@ class Window(QWidget):
         
         #shortcut = QShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Enter), self)
         #shortcut.activated.connect(self.clicked)
+
+    def menu_trigger(self, action):
+        print(action.text())
+        print("hi")
+
+
 
     def clicked(self):
         self.key = self.keys[self.count]
