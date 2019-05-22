@@ -1,0 +1,51 @@
+the rest:ato
+air conditioner:eakon
+curtain:kaaten
+cushion:kusshon
+shampoo:shanpuu
+soy sauce:shooyu
+switch:suicchi
+soup:suupu
+skirt:sukaato
+outside:soto
+sofa:sofa
+towel:taoru
+diary:nikki
+banana:banana
+popcorn:poppukoon
+insect:mushi
+rent:yachin
+evening:yuugata
+answering machine:rusubandenwa
+refrigerator:reezooko
+candle:roosoku
+bright:akarui
+to feel sick:kibun ga warui
+dark:kurai
+to feel embarrassed:hazukashii
+something opens:aku
+to apologize:ayamaru
+to press/push:osu
+to drop something:otosu
+water boils:oyu ga waku
+to fall down:korobu
+to break something:kowasu
+to bloom:saku
+something closes:shimaru
+to be saved/helped:tasukaru
+to ask a favor:tanomu
+something turns on:tsuku
+to make dirty:yogosu
+something drops:ochiru
+to tidy up:katazukeru
+to think about/consider:kangaeru
+something goes off:kieru
+something breaks:kowareru
+to become dirty:yogoreru
+to place an order:chuumonsuru
+right away:imasugu
+thanks to:okagede
+see you:osakini shitsureeshimasu
+you must be tired after working so hard:otsukaresama
+what should I do:dooshiyoo
+first of all:mazu
