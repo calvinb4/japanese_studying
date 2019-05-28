@@ -12,18 +12,14 @@ import random
 #a = {"dictionary":"jisho","you":"anata","to hear":"kiku","stairs":"kaidan","white":"shiro"}
 
 #file_read = 'genki_2.txt'
-file_read = "test.py"
+#file_read = "test.py"
 
-with open(file_read,'r') as f:
-    f = f.read()
-    lines = f.splitlines()
-    keys = []
-    vals = []
-    for line in lines:
-        line = line.split(":")
-        keys.append(line[0])
-        vals.append(line[1])
-    dictionary = dict(zip(keys, vals))
+
+
+class custom_menu(QMenu):
+    def actionEvent(self, event):
+        super().actionEvent(event)
+        self.show()
 
 class Missed_Display(QScrollArea):
     def __init__(self):
@@ -85,14 +81,17 @@ class Window(QWidget):
 
         self.files_added = []
 
+        
         # Drop down menu
         files = [f for f in os.listdir("vocab_files") if os.path.isfile(f)]
+        
+        self.setup_dictionary()
         
         
         self.toolbutton = QToolButton(self)
         self.toolbutton.setText("Select Files")
         
-        self.toolmenu = QMenu(self)
+        self.toolmenu = custom_menu(self)
         for i in files:
             #self.checkbox = QCheckBox(i, self.toolmenu)
             #self.checkbox.filename = i
@@ -110,11 +109,7 @@ class Window(QWidget):
         self.toolmenu.triggered.connect(self.menu_trigger)
         self.toolbutton.setMenu(self.toolmenu)
         self.toolbutton.setPopupMode(QToolButton.InstantPopup)
-        self.toolbutton.move(200,200)
-
-        print(self.toolmenu.actions())
-
-        
+        self.toolbutton.move(200,200)        
         
 
         self.missed = {}
@@ -124,12 +119,12 @@ class Window(QWidget):
         self.setFont(font)
         
         self.count = 0
-
-        self.setup_dictionary()
         
         self.lbl2 = QLabel(self)
+        self.lbl2.move(100, 150)
 
         self.lbl3 = QLabel(self)
+        self.lbl3.move(100, 110)
         
         self.btn = QPushButton("Ok!", self)
         self.btn.move(100, 50)
@@ -142,7 +137,11 @@ class Window(QWidget):
         self.le = QLineEdit(self)
         self.le.move(100, 20)
         
-        self.lbl1 = QLabel(self.keys[self.count], self)
+        if not self.keys:
+            self.lbl1 = QLabel("", self)
+        else:
+            self.lbl1 = QLabel(self.keys[self.count], self)
+            
         self.lbl1.move(100, 200)
         self.lbl1.adjustSize()
 
@@ -150,6 +149,14 @@ class Window(QWidget):
         self.btn3.move(250, 85)
         self.btn3.clicked.connect(self.skip_question)
 
+
+        self.start_test = QPushButton("Start!", self)
+        self.start_test.move(250,250)
+        self.start_test.clicked.connect(self.start_test_method)
+
+
+
+        
         self.setGeometry(100, 100, 500, 300)
         self.setWindowTitle("Quizzer")
         self.show()
@@ -162,16 +169,29 @@ class Window(QWidget):
         #shortcut = QShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Enter), self)
         #shortcut.activated.connect(self.clicked)
 
+
+    def start_test_method(self):
+        self.count = 0
+        self.setup_dictionary()
+
     def menu_trigger(self, action):
-        print(action.text())
-        print("hi")
+        if (action.text() in self.files_added):
+            self.files_added.remove(action.text())
+        else:
+            self.files_added.append(action.text())
 
 
 
-    def clicked(self):
+    def clicked(self): # Ok button
+        
+        if not self.keys: # No file selected
+            self.lbl2.setText("Select a file.")
+            self.lbl2.adjustSize()
+            return
+        
         self.key = self.keys[self.count]
         
-        if (self.le.text() == dictionary[self.key]):
+        if (self.le.text() == self.dictionary[self.key]):
             self.already_missed = False
             self.lbl2.setText("Correct")
             self.lbl2.adjustSize()
@@ -195,19 +215,45 @@ class Window(QWidget):
             self.lbl2.adjustSize()
             self.lbl2.move(100, 150)
             if (self.already_missed == False):
-                self.missed[self.key + "    " + dictionary[self.key]] = self.le.text()
+                self.missed[self.key + "    " + self.dictionary[self.key]] = self.le.text()
                 self.already_missed = True # Otherwise duplicate values in missed
 
     def setup_dictionary(self):
-        self.keys = list(dictionary.keys())
+        keys = []
+        vals = []
+        for file_read in self.files_added:
+
+            with open(file_read,'r') as f:
+                f = f.read()
+                lines = f.splitlines()
+                #keys = []
+                #vals = []
+                for line in lines:
+                    line = line.split(":")
+                    keys.append(line[0])
+                    vals.append(line[1])
+        self.dictionary = dict(zip(keys, vals))
+        
+        self.keys = list(self.dictionary.keys())
         random.shuffle(self.keys)
 
+        if self.keys:
+            self.lbl1.setText(self.keys[0])
+            self.lbl1.adjustSize()
+
+        
     def show_answer(self):
+
+        if not self.keys:
+            self.lbl2.setText("Select a file.")
+            self.lbl2.adjustSize()
+            return
+        
         key = self.keys[self.count]
 
         self.lbl3.move(100, 110)
         self.lbl3.setMargin(10)
-        self.lbl3.setText(dictionary[key])
+        self.lbl3.setText(self.dictionary[key])
         self.lbl3.adjustSize()
 
     def print_missed(self):
@@ -226,6 +272,12 @@ class Window(QWidget):
 
     def skip_question(self):
         self.already_missed = False
+
+        if not self.keys:
+            self.lbl2.setText("Select a file.")
+            self.lbl2.adjustSize()
+            return
+        
         self.key = self.keys[self.count]
         if (len(self.keys) == self.count + 1):
                 self.print_missed()
@@ -238,7 +290,7 @@ class Window(QWidget):
             self.lbl3.setText("") # Refreshes answer to null string
             self.le.setText("") # Refreshes input to null string
 
-            self.missed[self.key + "    " + dictionary[self.key]] = "Skipped"
+            self.missed[self.key + "    " + self.dictionary[self.key]] = "Skipped"
 
     def return_missed(self):
         return self.missed
