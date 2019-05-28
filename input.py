@@ -83,7 +83,9 @@ class Window(QWidget):
 
         
         # Drop down menu
-        files = [f for f in os.listdir("vocab_files") if os.path.isfile(f)]
+
+        # Note that this line finds subdirectories as well, so make sure vocab_files only contains files
+        files = [f for f in os.listdir("./vocab_files")]
         
         self.setup_dictionary()
         
@@ -112,8 +114,8 @@ class Window(QWidget):
         self.toolbutton.move(200,200)        
         
 
-        self.missed = {}
-        self.already_missed = False
+        #self.missed = {}
+        #self.already_missed = False
         
         font = QtGui.QFont("Times", 16, QtGui.QFont.Normal)
         self.setFont(font)
@@ -171,6 +173,7 @@ class Window(QWidget):
 
 
     def start_test_method(self):
+        self.lbl2.setText("")
         self.count = 0
         self.setup_dictionary()
 
@@ -219,19 +222,33 @@ class Window(QWidget):
                 self.already_missed = True # Otherwise duplicate values in missed
 
     def setup_dictionary(self):
+        self.missed = {}
+        self.already_missed = False
         keys = []
         vals = []
+        file_path = "./vocab_files/"
+        
+        
         for file_read in self.files_added:
+            path = file_path + file_read
 
-            with open(file_read,'r') as f:
-                f = f.read()
-                lines = f.splitlines()
-                #keys = []
-                #vals = []
-                for line in lines:
-                    line = line.split(":")
-                    keys.append(line[0])
-                    vals.append(line[1])
+
+            try:
+                
+                with open(path,'r') as f:
+                    f = f.read()
+                    lines = f.splitlines()
+                    #keys = []
+                    #vals = []
+                    for line in lines:
+                        line = line.split(":")
+                        keys.append(line[0])
+                        vals.append(line[1])
+
+            except IsADirectoryError:
+                self.lbl2.setText("Error, please select a valid file.")
+                self.lbl2.adjustSize()
+                
         self.dictionary = dict(zip(keys, vals))
         
         self.keys = list(self.dictionary.keys())
