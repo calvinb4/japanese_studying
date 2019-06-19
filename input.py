@@ -186,6 +186,11 @@ class Window(QWidget):
         else:
             self.files_added.append(action.text())
 
+    def update_progress(self):
+        lbl_counter_text = str(self.count) + "/" + str(len(self.dictionary))
+        self.lbl_counter.setText(lbl_counter_text)
+        self.lbl_counter.adjustSize()
+
 
 
     def clicked(self): # Ok button
@@ -216,9 +221,10 @@ class Window(QWidget):
                 self.lbl3.setText("") # Refreshes answer to null string
                 self.le.setText("") # Refreshes input to null string
 
-                lbl_counter_text = str(self.count) + "/" + str(len(self.dictionary))
-                self.lbl_counter.setText(lbl_counter_text)
-                self.lbl_counter.adjustSize()
+                # lbl_counter_text = str(self.count) + "/" + str(len(self.dictionary))
+                # self.lbl_counter.setText(lbl_counter_text)
+                # self.lbl_counter.adjustSize()
+                self.update_progress()
             
         else:
             self.lbl2.setText("Incorrect")
@@ -313,6 +319,8 @@ class Window(QWidget):
         
             self.lbl3.setText("") # Refreshes answer to null string
             self.le.setText("") # Refreshes input to null string
+
+            self.update_progress()
 
             self.missed[self.key + "    " + self.dictionary[self.key]] = "Skipped"
 
