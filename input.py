@@ -231,7 +231,8 @@ class Window(QWidget):
             self.lbl2.adjustSize()
             self.lbl2.move(100, 150)
             if (self.already_missed == False):
-                self.missed[self.key + "    " + self.dictionary[self.key]] = self.le.text()
+                self.missed[self.key + ":" + self.dictionary[self.key]] = self.le.text()
+                #print("update missed")
                 self.already_missed = True # Otherwise duplicate values in missed
 
     def setup_dictionary(self):
@@ -286,12 +287,15 @@ class Window(QWidget):
         self.lbl3.setText(self.dictionary[key])
         self.lbl3.adjustSize()
 
-    def print_missed(self):
-        #printed_file = open("missed.txt","w+")
-        #printed_file.write("Missed words:\nEnglish    Correct answer    Your answer\n")
-        #for i in missed:
-        #    printed_file.write(i+"    "+missed[i]+"\n")
 
+    def print_missed(self):
+        #print("hi")
+        printed_file = open("./vocab_files/missed.txt","w+")
+        #printed_file.write("Missed words:\nEnglish    Correct answer    Your answer\n")
+        for i in self.missed:
+            printed_file.write(i+"\n")
+        #    print(i)
+            
         #webbrowser.open("missed.txt") # Opens missed words
 
         #self.close() # Closes window
@@ -307,8 +311,15 @@ class Window(QWidget):
             self.lbl2.setText("Select a file.")
             self.lbl2.adjustSize()
             return
+
+                    
         
         self.key = self.keys[self.count]
+
+        self.missed[self.key + ":" + self.dictionary[self.key]] = "Skipped"
+        self.missed[self.key + ":" + self.dictionary[self.key]] = "Skipped"
+        
+        
         if (len(self.keys) == self.count + 1):
                 self.print_missed()
         else:
@@ -322,7 +333,6 @@ class Window(QWidget):
 
             self.update_progress()
 
-            self.missed[self.key + "    " + self.dictionary[self.key]] = "Skipped"
 
     def return_missed(self):
         return self.missed
