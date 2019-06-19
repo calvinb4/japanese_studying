@@ -111,7 +111,7 @@ class Window(QWidget):
         self.toolmenu.triggered.connect(self.menu_trigger)
         self.toolbutton.setMenu(self.toolmenu)
         self.toolbutton.setPopupMode(QToolButton.InstantPopup)
-        self.toolbutton.move(200,200)        
+        self.toolbutton.move(250,250)        
         
 
         #self.missed = {}
@@ -151,9 +151,12 @@ class Window(QWidget):
         self.btn3.move(250, 85)
         self.btn3.clicked.connect(self.skip_question)
 
+        self.lbl_counter = QLabel(self)
+        self.lbl_counter.move(250,150)
+
 
         self.start_test = QPushButton("Start!", self)
-        self.start_test.move(250,250)
+        self.start_test.move(400,250)
         self.start_test.clicked.connect(self.start_test_method)
 
 
@@ -212,6 +215,10 @@ class Window(QWidget):
 
                 self.lbl3.setText("") # Refreshes answer to null string
                 self.le.setText("") # Refreshes input to null string
+
+                lbl_counter_text = str(self.count) + "/" + str(len(self.dictionary))
+                self.lbl_counter.setText(lbl_counter_text)
+                self.lbl_counter.adjustSize()
             
         else:
             self.lbl2.setText("Incorrect")
