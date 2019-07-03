@@ -4,7 +4,7 @@
 import os
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar, QComboBox, QToolButton, QMenu, QCheckBox, QWidgetAction
+from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar, QComboBox, QToolButton, QMenu, QCheckBox, QWidgetAction, QTextEdit
 import sys
 #import webbrowser
 import random
@@ -21,6 +21,22 @@ class custom_menu(QMenu):
         super().actionEvent(event)
         self.show()
 
+class add_pairs(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+
+    def initUI(self):
+        self.setGeometry(100, 100, 500, 300)
+        self.setWindowTitle("Quizzer")
+
+
+        self.prompt_text_edit = QTextEdit(self)
+        self.prompt_text_edit.move(50,50)
+
+        self.answer_text_edit = QTextEdit(self)
+        self.answer_text_edit.move(250,50)
+
 class Missed_Display(QScrollArea):
     def __init__(self):
         super().__init__()
@@ -32,6 +48,7 @@ class Missed_Display(QScrollArea):
         self.layout = QVBoxLayout(widget)
         #layout.addLayout(box)
         #self.layout.setAlignment(Qt.AlignTop)
+        
 
         #self.scroll = QScrollBar()
         #self.scroll.setMaximum(900)
@@ -151,6 +168,12 @@ class Window(QWidget):
         self.btn3.move(250, 85)
         self.btn3.clicked.connect(self.skip_question)
 
+
+        self.add_words = QPushButton("Add file", self)
+        self.add_words.move(50,50)
+        self.add_words.clicked.connect(self.open_pair_window)
+        
+
         self.lbl_counter = QLabel(self)
         self.lbl_counter.move(250,150)
 
@@ -179,6 +202,12 @@ class Window(QWidget):
         self.lbl2.setText("")
         self.count = 0
         self.setup_dictionary()
+
+
+    def open_pair_window(self):
+        self.new_pairs = add_pairs()
+        self.new_pairs.show()
+        
 
     def menu_trigger(self, action):
         if (action.text() in self.files_added):
