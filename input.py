@@ -4,17 +4,15 @@
 import os
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar, QComboBox, QToolButton, QMenu, QCheckBox, QWidgetAction, QTextEdit, QComboBox
+from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar, QComboBox, QToolButton, QMenu, QCheckBox, QWidgetAction, QTextEdit, QComboBox, QMessageBox
 import sys
 #import webbrowser
 import random
-import re
 
 #a = {"dictionary":"jisho","you":"anata","to hear":"kiku","stairs":"kaidan","white":"shiro"}
 
 #file_read = 'genki_2.txt'
 #file_read = "test.py"
-
 
 
 class custom_menu(QMenu):
@@ -41,9 +39,16 @@ class add_pairs(QWidget):
         self.answer_text_edit = QTextEdit(self)
         self.answer_text_edit.move(550,50)
 
-        self.write_button = QPushButton("Go!",self)
-        self.write_button.move(400,150)
+        self.read_button = QPushButton("Get data from selected file",self)
+        self.read_button.move(400,150)
+        self.read_button.clicked.connect(self.read_button_clicked)
+
+        self.write_button = QPushButton("Write to selected file",self) # Note: add a confirm prompt
+        self.write_button.move(400,100)
         self.write_button.clicked.connect(self.write_button_clicked)
+
+        self.error_label = QLabel(self)
+        self.error_label.move(400,250)
 
         # self.file_list = QToolButton(self)
         # self.file_list.setText("Select file for editing")
@@ -67,23 +72,99 @@ class add_pairs(QWidget):
         for i in files:
             self.edit_combo_box.addItem(str(i))
 
-        
-
-        
 
     def write_button_clicked(self):
+
+        #self.warning_window = confirmation_window()
+        #self.warning_window.show()
+
+        warning = QMessageBox(self)
+        warning.setWindowTitle("Confirm file overwrite?")
+        warning.setText("Are you sure you would like to write to this file? This action can not be undone.")
+        warning.addButton(QMessageBox.Yes)
+        warning.addButton(QMessageBox.No)
+
+        warning.show()
+
+        if (warning.exec() == QMessageBox.Yes):
+        
+            file_path = "./vocab_files/"
+            file_path_read = file_path + self.edit_combo_box.currentText()
+
+            prompt_words = self.prompt_text_edit.toPlainText().split("\n")
+            #print("prompt:",prompt_words)
+            answer_words = self.answer_text_edit.toPlainText().split("\n")
+
+            new_file_contents = ""
+
+            # len of prompt_words must be same as that of answer_words
+            try:
+                for i in range(0,len(prompt_words)):
+                    new_file_contents = new_file_contents + prompt_words[i] + ":" + answer_words[i] + "\n"
+            except IndexError:
+                #print("error")
+                self.error_label.setText("Error: unequal number of answer:key pairs")
+                self.error_label.adjustSize()
+                
+            print(new_file_contents)
+            
+            try:
+                with open(file_path_read, "w") as f:
+                    f.write(new_file_contents)
+
+            except IsADirectoryError:
+                #print("error")
+                self.error_label.setText("Error: folders are invalid options. Please select a file.")
+                self.error_label.adjustSize()
+                
+
+
+        
+
+        
+
+    def read_button_clicked(self):
         print(self.prompt_text_edit.toPlainText())
+        print(self.edit_combo_box.currentText())
         self.read_file()
 
 
     def read_file(self):
-        with open("test.txt") as f:
-            f = f.read()
+        
+        file_path = "./vocab_files/"
+        file_path_read = file_path + self.edit_combo_box.currentText()
 
-            #f = re.findall(r"[\w\-\_']+", f)
-            f = f.replace("\n",":")
-            f = f.split(":")
-        print(f)
+        try:
+        
+            with open(file_path_read) as f:
+                f = f.read()
+
+                #f = re.findall(r"[\w\-\_']+", f)
+                f = f.replace("\n",":")
+                f = f.split(":")
+            print(f)
+
+            prompt_text = ""
+            answer_text = ""
+            
+            for i in range(0,len(f),2):
+                prompt_text = prompt_text + f[i] + "\n"
+
+            for i in range(1,len(f),2):
+                answer_text = answer_text + f[i] + "\n"
+
+            prompt_text = prompt_text.rstrip()
+            answer_text = answer_text.rstrip()
+
+            #print("prompt text:",prompt_text)
+            #print(answer_text)
+
+            self.prompt_text_edit.setText(prompt_text)
+            self.answer_text_edit.setText(answer_text)
+
+        # Edit this later
+        except IsADirectoryError:
+            print("error")
         
 
 class Missed_Display(QScrollArea):
