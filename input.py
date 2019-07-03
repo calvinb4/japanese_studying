@@ -4,7 +4,7 @@
 import os
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar, QComboBox, QToolButton, QMenu, QCheckBox, QWidgetAction, QTextEdit
+from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QLabel, QShortcut, QVBoxLayout, QScrollArea, QHBoxLayout, QScrollBar, QComboBox, QToolButton, QMenu, QCheckBox, QWidgetAction, QTextEdit, QComboBox
 import sys
 #import webbrowser
 import random
@@ -21,21 +21,67 @@ class custom_menu(QMenu):
         super().actionEvent(event)
         self.show()
 
+
+
+# read/writes to .txt files separated by colons. Reading fills text edits with text for each line; writing works by writing paired lines to a file. Editing could be just reading and then re-writing
 class add_pairs(QWidget):
     def __init__(self):
         super().__init__()
         self.initUI()
 
     def initUI(self):
-        self.setGeometry(100, 100, 500, 300)
-        self.setWindowTitle("Quizzer")
+        self.setGeometry(100, 100, 900, 300)
+        self.setWindowTitle("Create/Edit Files")
 
 
         self.prompt_text_edit = QTextEdit(self)
         self.prompt_text_edit.move(50,50)
 
         self.answer_text_edit = QTextEdit(self)
-        self.answer_text_edit.move(250,50)
+        self.answer_text_edit.move(550,50)
+
+        self.write_button = QPushButton("Go!",self)
+        self.write_button.move(400,150)
+        self.write_button.clicked.connect(self.write_button_clicked)
+
+        # self.file_list = QToolButton(self)
+        # self.file_list.setText("Select file for editing")
+        # self.file_list.move(400,50)
+
+        # add_pairs_window = QWidget()
+        # self.layout = QVBoxLayout(add_pairs_window)
+
+        # self.editing_menubar = QMenuBar(self)
+        
+        # self.editing_menubar.addMenu("File list")
+        
+        # self.layout.addWidget(self.editing_menubar)
+
+        self.edit_combo_box = QComboBox(self)
+        self.edit_combo_box.move(400,50)
+
+        # Note that this line finds subdirectories as well, so make sure vocab_files only contains files or handles exception
+        files = [f for f in os.listdir("./vocab_files")]
+
+        for i in files:
+            self.edit_combo_box.addItem(str(i))
+
+        
+
+        
+
+    def write_button_clicked(self):
+        print(self.prompt_text_edit.toPlainText())
+        self.read_file()
+
+
+    def read_file(self):
+        with open("test.txt") as f:
+            f = f.read()
+            f = f.split(":")
+            f = f.split("\n")
+        print(f)
+        
 
 class Missed_Display(QScrollArea):
     def __init__(self):
@@ -108,7 +154,7 @@ class Window(QWidget):
         
         
         self.toolbutton = QToolButton(self)
-        self.toolbutton.setText("Select Files")
+        self.toolbutton.setText("Select File(s)")
         
         self.toolmenu = custom_menu(self)
         for i in files:
