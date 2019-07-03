@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QAppl
 import sys
 #import webbrowser
 import random
+import re
 
 #a = {"dictionary":"jisho","you":"anata","to hear":"kiku","stairs":"kaidan","white":"shiro"}
 
@@ -78,8 +79,10 @@ class add_pairs(QWidget):
     def read_file(self):
         with open("test.txt") as f:
             f = f.read()
+
+            #f = re.findall(r"[\w\-\_']+", f)
+            f = f.replace("\n",":")
             f = f.split(":")
-            f = f.split("\n")
         print(f)
         
 
