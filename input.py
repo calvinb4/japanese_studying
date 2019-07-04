@@ -48,7 +48,7 @@ class add_pairs(QWidget):
         self.write_button.clicked.connect(self.write_button_clicked)
 
         self.error_label = QLabel(self)
-        self.error_label.move(400,250)
+        self.error_label.move(400,275)
 
         # self.file_list = QToolButton(self)
         # self.file_list.setText("Select file for editing")
@@ -346,8 +346,8 @@ class Window(QWidget):
         self.btn3.clicked.connect(self.skip_question)
 
 
-        self.add_words = QPushButton("Add file", self)
-        self.add_words.move(50,50)
+        self.add_words = QPushButton("Edit files", self)
+        self.add_words.move(350,20)
         self.add_words.clicked.connect(self.open_pair_window)
         
 
