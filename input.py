@@ -66,11 +66,58 @@ class add_pairs(QWidget):
         self.edit_combo_box = QComboBox(self)
         self.edit_combo_box.move(400,50)
 
-        # Note that this line finds subdirectories as well, so make sure vocab_files only contains files or handles exception
+        self.new_file_line_edit = QLineEdit(self)
+        self.new_file_line_edit.move(400,225)
+
+        self.new_file_button = QPushButton("Create new file", self)
+        self.new_file_button.move(400,250)
+        self.new_file_button.clicked.connect(self.new_file_clicked)
+
+        self.delete_file_button = QPushButton("Delete file", self)
+        self.delete_file_button.move(400,200)
+        self.delete_file_button.clicked.connect(self.delete_file_clicked)
+
+
+        #self.update_files_avaliable()
+
         files = [f for f in os.listdir("./vocab_files")]
 
         for i in files:
             self.edit_combo_box.addItem(str(i))
+
+
+    # def update_files_avaliable(self):
+    # # Note that this line finds subdirectories as well, so make sure vocab_files only contains files or handles exception
+
+    #     files = [f for f in os.listdir("./vocab_files")]
+
+    #     for i in files:
+    #         self.edit_combo_box.addItem(str(i))
+
+    def delete_file_clicked(self):
+        warning = QMessageBox(self)
+        warning.setWindowTitle("Confirm " + self.edit_combo_box.currentText() + " file deletion?")
+        warning.setText("Are you sure you would like to delete this file " + self.edit_combo_box.currentText() + "? This action can not be undone.")
+        warning.addButton(QMessageBox.Yes)
+        warning.addButton(QMessageBox.No)
+
+        warning.show()
+
+        if (warning.exec() == QMessageBox.Yes):
+            try:
+                os.remove("./vocab_files/" + self.edit_combo_box.currentText())
+
+                self.edit_combo_box.removeItem(self.edit_combo_box.currentIndex())
+
+            except IsADirectoryError:
+                self.error_label.setText("Error: you can not delete folders")
+                self.error_label.adjustSize()
+
+    def new_file_clicked(self):
+        with open ("./vocab_files/" + self.new_file_line_edit.text(), "w") as f:
+            f.write("")
+
+        self.edit_combo_box.addItem(self.new_file_line_edit.text())
 
 
     def write_button_clicked(self):
@@ -79,8 +126,8 @@ class add_pairs(QWidget):
         #self.warning_window.show()
 
         warning = QMessageBox(self)
-        warning.setWindowTitle("Confirm file overwrite?")
-        warning.setText("Are you sure you would like to write to this file? This action can not be undone.")
+        warning.setWindowTitle("Confirm " + self.edit_combo_box.currentText() + " file overwrite?")
+        warning.setText("Are you sure you would like to write to the file " + self.edit_combo_box.currentText() + "? This action can not be undone.")
         warning.addButton(QMessageBox.Yes)
         warning.addButton(QMessageBox.No)
 
